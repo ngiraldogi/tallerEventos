@@ -15,7 +15,21 @@ function activarCheckbox(){
         div.innerHTML="";
     }
 }
-
+//3.Activar boton si el campo de e-mail no esta vacío
+function validar() {
+    let qwe=document.getElementById("exampleInputEmail1")
+    let btn = document.getElementById("enviar")
+    let desab = false;
+    if (qwe.value==""){
+        desab=true;
+    }
+    if (desab==true){
+       btn.disabled= true;
+    } else{
+        btn.disabled = false;
+    }
+}
+document.getElementById("exampleInputEmail1").addEventListener("keyup",validar);
 //4. verifica que las contraseñas sean iguales
  var inputContraseña1 = document.getElementById("exampleInputPassword1");
  var inputContraseña2 = document.getElementById("exampleInputPassword2");
