@@ -15,6 +15,24 @@ function activarCheckbox(){
         div.innerHTML="";
     }
 }
+
+//2. muestra en mensaje de alerta en mayuscula cuando se pierde el foco
+var inputNombre = document.getElementById("exampleInputName1");
+var inputApellido = document.getElementById("exampleInputLastName1");
+
+function alertaMayuscula(){
+    let nombre1 = inputNombre.value;
+    let apellido1 = inputApellido.value;
+    if(nombre1 && nombre1.trim()){  //se comprueba que el campo nombre contenga texto, con trim se comprueba que el texto no sean espacios
+        alert(nombre1.toUpperCase());
+    }
+    if(apellido1 && apellido1.trim()){
+        alert(apellido1.toUpperCase());
+    }
+    //alert(nombre1.toUpperCase());
+    //alert(apellido1.toUpperCase());
+}
+
 //3.Activar boton si el campo de e-mail no esta vacío
 function validar() {
     let qwe=document.getElementById("exampleInputEmail1")
