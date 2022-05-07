@@ -26,33 +26,41 @@
               </label>
             </div>
           </div>
-          <div id="opciones"></div> <!--activa o desactiva los checkbox-->
+          <div id="opciones">
+
+          </div> <!--activa o desactiva los checkbox-->
           <div class="mb-3">
             <label for="exampleInputName1" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="exampleInputName1" placeholder="Nombre">
+            <input type="text" class="form-control" id="exampleInputName1" placeholder="Nombre" onchange="alertaMayuscula()">
+            <!--<input type="text" class="form-control" id="exampleInputName1" placeholder="Nombre">-->
           </div>
           <div class="mb-3">
             <label for="exampleInputLastName1" class="form-label">Apellidos</label>
-            <input type="text" class="form-control" id="exampleInputLastName1" placeholder="Apellidos">
+            <input type="text" class="form-control" id="exampleInputLastName1" placeholder="Apellidos" onchange="alertaMayuscula()">
+            <!--<input type="text" class="form-control" id="exampleInputLastName1" placeholder="Apellidos">-->
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo Electrónico">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onfocus="validar()"placeholder="Correo Electrónico">
           </div>
-          <!--mdboostrap-->
           <div class="mb-3">
             <label for="exampleInputDate" class="form-label">Fecha de Nacimiento</label>
             <input type="date" class="form-control" id="exampleInputDate">
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="******">
+            <input type="password" class="form-control" id="exampleInputPassword1" onchange="verificarContraseña()" placeholder="********" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[#?!@$%^&*-]).{8,11}$" title ="Debe contener como minimo una letra minuscula, una letra mayuscula y un caracter especial. Debe tener entre 8 y 11 caracteres" required>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword2" class="form-label">Confirmar Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="******">
+            <input type="password" class="form-control" id="exampleInputPassword2" onchange="verificarContraseña()" placeholder="********" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[#?!@$%^&*-]).{8,11}$" title ="Debe contener como minimo una letra minuscula, una letra mayuscula y un caracter especial. Debe tener entre 8 y 11 caracteres" required>
           </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <div id="mensajeContraseña">
+
+          </div>
+          <div>
+            <button type="submit" class="btn btn-primary" id="enviar" disabled>Enviar</button>
+          </div>   
       </form>
     </div>
   </div>
