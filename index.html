@@ -31,21 +31,21 @@
           </div> <!--activa o desactiva los checkbox-->
           <div class="mb-3">
             <label for="exampleInputName1" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="exampleInputName1" placeholder="Nombre" onchange="alertaMayuscula()">
+            <input type="text" class="form-control" id="exampleInputName1" placeholder="Nombre" onchange="alertaMayuscula()" required>
             <!--<input type="text" class="form-control" id="exampleInputName1" placeholder="Nombre">-->
           </div>
           <div class="mb-3">
             <label for="exampleInputLastName1" class="form-label">Apellidos</label>
-            <input type="text" class="form-control" id="exampleInputLastName1" placeholder="Apellidos" onchange="alertaMayuscula()">
+            <input type="text" class="form-control" id="exampleInputLastName1" placeholder="Apellidos" onchange="alertaMayuscula()" required>
             <!--<input type="text" class="form-control" id="exampleInputLastName1" placeholder="Apellidos">-->
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onfocus="validar()"placeholder="Correo Electrónico">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onfocus="validar()"placeholder="Correo Electrónico" required>
           </div>
           <div class="mb-3">
             <label for="exampleInputDate" class="form-label">Fecha de Nacimiento</label>
-            <input type="date" class="form-control" id="exampleInputDate">
+            <input type="date" class="form-control" id="exampleInputDate" required>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Contraseña</label>
@@ -67,5 +67,3 @@
 </body>
 <script src="formulario.js"></script>
 </html>
-
-<!--traer la maqueta del formulario (html)
